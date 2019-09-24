@@ -1,0 +1,12 @@
+1. I tend to use bad names when I'm flustered or rushing. 
+
+I also tend to keep dead code either just doing nothing or commented out, although I do this 
+so I can come back to them if they are needed again or I can use them to teach me.
+
+
+2. It surprised me that we aqre not suppost to use positional markers becuase in a huge program it may help
+you fidn what you are looking for.
+
+
+3. I disagree with the positional markers becuase in a huge program it may help
+you fidn what you are looking for.

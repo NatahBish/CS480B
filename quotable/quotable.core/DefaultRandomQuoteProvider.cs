@@ -4,18 +4,17 @@ using System.Text;
 
 namespace quotable.core
 {
-    class DefaultRandomQuoteProvider : RandomQuoteProvider
+    public sealed class DefaultRandomQuoteProvider : RandomQuoteProvider
     {
-        public Guid ID => throw new NotImplementedException();
-
-        public long ComputeNumber(long input)
+        public DefaultRandomQuoteProvider(IEnumerable<String> iString)
         {
-            throw new NotImplementedException();
+            IEnumerable<String> diString = iString;
         }
-
         public IEnumerable<string> getQuote(long lng)
         {
-            throw new NotImplementedException();
+
+
+            return null;
         }
     }
 }
