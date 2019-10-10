@@ -12,8 +12,9 @@ namespace quotable.console
         /// <param name="args"></param>
         static void Main(string[] args)
         {
-            SimpleRandomQuoteProvider simp = new SimpleRandomQuoteProvider();
+            SimpleRandomQuoteProvider simp = new SimpleRandomQuoteProvider("iD","hi","writer");
             string input = "";
+            simp.getQuote(1);
 
             ///Helps answer Question 4, we did not learn how to read from a file.
             String[] myquotes = { "endure and survive -Last of Us", "You Live to Hunt Another Day -Hunt Showdown", "Rise Up Damned Soul -Hunt Showdown" };

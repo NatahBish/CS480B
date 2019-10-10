@@ -15,6 +15,8 @@ namespace quotable.core
         /// <param name="lng"></param>
         /// <returns> The IEnumerable sequence for the lng. </returns>
         IEnumerable<string> getQuote(long lng);
-
+        void addToQuoteList(string iD, string quote, string autho);
+        IEnumerable<string> getAllQuotes();
+        IEnumerable<string> getQuoteByID(string ID);
     }
 }

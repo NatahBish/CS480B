@@ -10,11 +10,27 @@ namespace quotable.core
         {
             IEnumerable<String> diString = iString;
         }
+
+        public void addToQuoteList(string iD, string quote, string autho)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<string> getAllQuotes()
+        {
+            throw new NotImplementedException();
+        }
+
         public IEnumerable<string> getQuote(long lng)
         {
 
 
             return null;
+        }
+
+        public IEnumerable<string> getQuoteByID(string ID)
+        {
+            throw new NotImplementedException();
         }
     }
 }

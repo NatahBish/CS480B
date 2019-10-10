@@ -5,7 +5,7 @@ namespace quotable.core
 {
     public sealed class SimpleRandomQuoteProvider : RandomQuoteProvider
     {
-
+        List<string> data = new List<string>();
         /// <summary>
         /// This is the String of quotes used to put into the IEnumerable.
         /// </summary>
@@ -19,9 +19,21 @@ namespace quotable.core
         /// <summary>
         /// Unused but is the constructer for the class.
         /// </summary>
+        public SimpleRandomQuoteProvider(string iD, string quote, string author)
+        {
+            data.Add(iD);
+            data.Add(quote);
+            data.Add(author);
+            data.Add("");
+        }
+
         public SimpleRandomQuoteProvider()
         {
-
+            addToQuoteList("0", "endure and survive", "-Ellie, Last of US");
+            addToQuoteList("1", "You Live to Hunt Another Day", "-HuntShowdown");
+            addToQuoteList("2", "Rise Up Damned Soul", "-HuntShowdown");
+            addToQuoteList("3", "War, War Never Changes", "-Fallout");
+            addToQuoteList("4", "You have died of dysentery", "-Oregon Trail");
         }
 
         /// <summary>
@@ -30,18 +42,70 @@ namespace quotable.core
         /// </summary>
         /// <param name="lng"></param>
         /// <returns> The IEnumerable need to access the quotes </returns>
-        public IEnumerable<string> getQuote(long lng)
+        public void addToQuoteList(string iD, string quote, string author)
         {
-            List<string> data = new List<string>();
-            for(int i = 0; i<lng; i++)
+            bool notUsed = true;
+            for (int i = 0; i > data.Count; i++)
             {
-                data.Add(myID[i % myQuotes.Length]);
-                data.Add(myQuotes[i % myQuotes.Length]);
-                data.Add(myAuthors[i % myQuotes.Length]);
+                if (iD.Equals(data[i]))
+                {
+                    notUsed = false;
+                }
             }
-            return data;
+            if(notUsed)
+            {
+                data.Add(iD);
+                data.Add(quote);
+                data.Add(author);
+                data.Add("");
+            }
 
         }
 
+        /// <summary>
+        /// Only used to test before I implement something
+        /// </summary>
+        /// <param name="lng"></param>
+        /// <returns></returns>
+        public IEnumerable<string> getQuote(long lng)
+        {
+            int answer1 = (3 % 3);
+            int answer2 = (0 % 3);
+            int answer3 = (6 % 3);
+            Console.WriteLine(answer1);
+            Console.WriteLine(answer2);
+            Console.WriteLine(answer3);
+            return data;
+            //List<string> data = new List<string>();
+            //for (int i = 0; i < lng; i++)
+            //{
+            //    data.Add(myID[i % myQuotes.Length]);
+            //    data.Add(myQuotes[i % myQuotes.Length]);
+            //    data.Add(myAuthors[i % myQuotes.Length]);
+            //}
+            //return data;
+        }
+
+        public IEnumerable<string> getQuoteByID(string ID)
+        {
+            List<string> quote = new List<string>();
+            for (int i = 0; i > data.Count; i++)
+            {
+                if (ID.Equals(data[i]))
+                {
+                    quote.Add(data[i]);
+                    quote.Add(data[i + 1]);
+                    quote.Add(data[i + 2]);
+                    return quote;
+                }
+            }
+            quote.Add("That is not a valid ID");
+            return quote;
+        }
+
+        public IEnumerable<string> getAllQuotes()
+        {
+            return data;
+        }
     }
 }
