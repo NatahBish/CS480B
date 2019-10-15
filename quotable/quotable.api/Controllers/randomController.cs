@@ -19,7 +19,7 @@ namespace quotable.api.Controllers
         /// <returns>IEnumerbale string but into the api </returns>
         // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public ActionResult<IEnumerable<string>> Get(SimpleRandomQuoteProvider simp)
         {
             return simp.getRandomQuote().ToList();
         }

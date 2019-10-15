@@ -16,6 +16,8 @@ namespace quotable.core
         String[] myAuthors = { "-Last of Us", "-Hunt Showdown", "-Hunt Showdown",
             "-Fallout", "-Oregon Trail"  };
 
+        public Random RNG { get; }
+
         /// <summary>
         /// Unused but is the constructer for the class.
         /// </summary>
@@ -37,6 +39,13 @@ namespace quotable.core
             addToQuoteList("2", "Rise Up Damned Soul", "-HuntShowdown");
             addToQuoteList("3", "War, War Never Changes", "-Fallout");
             addToQuoteList("4", "You have died of dysentery", "-Oregon Trail");
+
+            RNG = new Random();
+        }
+
+        public SimpleRandomQuoteProvider(Random rng) : this()
+        {
+            this.RNG = rng;
         }
 
         /// <summary>
@@ -55,7 +64,7 @@ namespace quotable.core
                     notUsed = false;
                 }
             }
-            if(notUsed)
+            if (notUsed)
             {
                 data.Add(iD);
                 data.Add(quote);
@@ -98,7 +107,7 @@ namespace quotable.core
         {
             List<string> quote = new List<string>();
             bool isNumeric = false;
-            if(isNumeric = int.TryParse(ID, out int n)) 
+            if (isNumeric = int.TryParse(ID, out int n))
             {
                 for (int i = 0; i < data.Count; i++)
                 {
@@ -127,7 +136,7 @@ namespace quotable.core
 
         public IEnumerable<string> getRandomQuote()
         {
-            Random rand = new Random();
+            Random rand = RNG;// new Random();
             int input = rand.Next(0, (data.Count / 4));
             string inputS = input.ToString();
 

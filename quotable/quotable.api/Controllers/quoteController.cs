@@ -12,12 +12,12 @@ namespace quotable.api.Controllers
     public class quoteController : ControllerBase
     {
         /// <summary>
-        /// Unused Not sure if needed
+        /// unused
         /// </summary>
         //private RandomQuoteProvider Quote { get; }
         //public quoteController(RandomQuoteProvider )
         //{
-        //    
+            
         //}
 
         SimpleRandomQuoteProvider simp = new SimpleRandomQuoteProvider();
