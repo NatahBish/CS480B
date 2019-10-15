@@ -1,4 +1,6 @@
 using NUnit.Framework;
+using quotable.api.Controllers;
+using quotable.core;
 
 namespace Tests
 {
@@ -12,7 +14,11 @@ namespace Tests
         [Test]
         public void Test1()
         {
-            Assert.Pass();
-        }
+            SimpleRandomQuoteProvider simp = new SimpleRandomQuoteProvider();
+            SimpleRandomQuoteProvider controller = new quoteController();
+
+
+
+            }
     }
 }

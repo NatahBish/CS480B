@@ -9,28 +9,19 @@ namespace quotable.api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class quoteController : ControllerBase
+    public class randomController : ControllerBase
     {
-        /// <summary>
-        /// Unused Not sure if needed
-        /// </summary>
-        //private RandomQuoteProvider Quote { get; }
-        //public quoteController(RandomQuoteProvider )
-        //{
-        //    
-        //}
-
         SimpleRandomQuoteProvider simp = new SimpleRandomQuoteProvider();
 
         /// <summary>
-        /// Completes the equivalent of "getALLQuotes()"
+        /// Completes the equivalent of "getRandomQuote"
         /// </summary>
         /// <returns>IEnumerbale string but into the api </returns>
         // GET api/values
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
-            return simp.getAllQuotes().ToList();
+            return simp.getRandomQuote().ToList();
         }
 
         /// <summary>

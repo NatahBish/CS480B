@@ -7,7 +7,7 @@ namespace quotable.core
     /// <summary>
     /// Defines a Random Quote Provider
     /// </summary>
-    interface RandomQuoteProvider
+    public interface RandomQuoteProvider
     {
         /// <summary>
         /// Creates the IEnumberable sequence.
@@ -18,5 +18,6 @@ namespace quotable.core
         void addToQuoteList(string iD, string quote, string autho);
         IEnumerable<string> getAllQuotes();
         IEnumerable<string> getQuoteByID(string ID);
+        IEnumerable<string> getRandomQuote();
     }
 }

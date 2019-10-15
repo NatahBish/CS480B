@@ -27,9 +27,12 @@ namespace quotable.core
             data.Add("");
         }
 
+        /// <summary>
+        /// Constructor that creates a generic SimpleRandomQuoteProvider
+        /// </summary>
         public SimpleRandomQuoteProvider()
         {
-            addToQuoteList("0", "endure and survive", "-Ellie, Last of US");
+            addToQuoteList("0", "endure and survive", "-Ellie, Last of Us");
             addToQuoteList("1", "You Live to Hunt Another Day", "-HuntShowdown");
             addToQuoteList("2", "Rise Up Damned Soul", "-HuntShowdown");
             addToQuoteList("3", "War, War Never Changes", "-Fallout");
@@ -66,7 +69,7 @@ namespace quotable.core
         /// Only used to test before I implement something
         /// </summary>
         /// <param name="lng"></param>
-        /// <returns></returns>
+        /// <returns> An Ienumerable used to test before we started using NUnit tests </returns>
         public IEnumerable<string> getQuote(long lng)
         {
             int answer1 = (3 % 3);
@@ -86,18 +89,32 @@ namespace quotable.core
             //return data;
         }
 
+        /// <summary>
+        /// Gets a Quote by the string ID which must be a number.
+        /// </summary>
+        /// <param name="ID"></param>
+        /// <returns> IEnumerable<string> needed that has one ID, quote, and author </string></returns>
         public IEnumerable<string> getQuoteByID(string ID)
         {
             List<string> quote = new List<string>();
-            for (int i = 0; i > data.Count; i++)
+            bool isNumeric = false;
+            if(isNumeric = int.TryParse(ID, out int n)) 
             {
-                if (ID.Equals(data[i]))
+                for (int i = 0; i < data.Count; i++)
                 {
-                    quote.Add(data[i]);
-                    quote.Add(data[i + 1]);
-                    quote.Add(data[i + 2]);
-                    return quote;
+                    if (ID.Equals(data[i]))
+                    {
+                        quote.Add(data[i]);
+                        quote.Add(data[i + 1]);
+                        quote.Add(data[i + 2]);
+                        return quote;
+                    }
                 }
+            }
+            else
+            {
+                quote.Add("That is not a valid ID");
+                return quote;
             }
             quote.Add("That is not a valid ID");
             return quote;
@@ -106,6 +123,28 @@ namespace quotable.core
         public IEnumerable<string> getAllQuotes()
         {
             return data;
+        }
+
+        public IEnumerable<string> getRandomQuote()
+        {
+            Random rand = new Random();
+            int input = rand.Next(0, (data.Count / 4));
+            string inputS = input.ToString();
+
+            List<string> quote = new List<string>();
+            for (int i = 0; i < data.Count; i++)
+            {
+                if (inputS.Equals(data[i]))
+                {
+                    quote.Add(data[i]);
+                    quote.Add(data[i + 1]);
+                    quote.Add(data[i + 2]);
+                    return quote;
+                }
+            }
+            quote.Add("The random number used an invalid random number.");
+            return quote;
+
         }
     }
 }

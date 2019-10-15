@@ -32,5 +32,10 @@ namespace quotable.core
         {
             throw new NotImplementedException();
         }
+
+        public IEnumerable<string> getRandomQuote()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
