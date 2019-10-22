@@ -12,7 +12,7 @@ namespace quotable.console
         /// <param name="args"></param>
         static void Main(string[] args)
         {
-            SimpleRandomQuoteProvider simp = new SimpleRandomQuoteProvider("iD","hi","writer");
+            SimpleRandomQuoteProvider simp = new SimpleRandomQuoteProvider();
             string input = "";
             simp.getQuote(1);
 
@@ -34,13 +34,11 @@ namespace quotable.console
                 bool isAlong = long.TryParse(input, out lng);
                 if (isAlong)
                 {
-                    IEnumerable<string> enumString = simp.getQuote(lng);
-
-                    foreach (var str in enumString)
+                    int inputInt = Convert.ToInt32(input);
+                    for(long i = 0; i < inputInt; i++)
                     {
-                        Console.WriteLine(str);
+                        simp.getQuoteByID(i.ToString());
                     }
-                    Console.WriteLine("");
 
                 }
                 else if (input.Equals("exit")) { }
