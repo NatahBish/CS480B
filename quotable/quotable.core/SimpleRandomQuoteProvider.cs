@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace quotable.core
 {
+    /// <summary>
+    /// Simplist Quote Provider for homework 0 and beyond.
+    /// </summary>
     public sealed class SimpleRandomQuoteProvider : RandomQuoteProvider
     {
         List<string> data = new List<string>();
@@ -16,6 +19,9 @@ namespace quotable.core
         String[] myAuthors = { "-Last of Us", "-Hunt Showdown", "-Hunt Showdown",
             "-Fallout", "-Oregon Trail"  };
 
+        /// <summary>
+        /// teachers way of using a random
+        /// </summary>
         public Random RNG { get; }
 
         /// <summary>
@@ -43,6 +49,9 @@ namespace quotable.core
             RNG = new Random();
         }
 
+        /// <summary>
+        /// teachers way of using a random
+        /// </summary>
         public SimpleRandomQuoteProvider(Random rng) : this()
         {
             this.RNG = rng;
@@ -52,7 +61,9 @@ namespace quotable.core
         /// This program takes the input from Program and returns the number of quotes requested from the hard-coded String List
         /// If the number is greater than teh number of quotes it will restart the list, so there is no crash.
         /// </summary>
-        /// <param name="lng"></param>
+        /// <param name="iD">ID in string format for easy printing</param>
+        /// <param name="quote">quote</param>
+        /// <param name="author">author</param>
         /// <returns> The IEnumerable need to access the quotes </returns>
         public void addToQuoteList(string iD, string quote, string author)
         {
@@ -129,11 +140,19 @@ namespace quotable.core
             return quote;
         }
 
+        /// <summary>
+        /// Returns all quotes in the object
+        /// </summary>
+        /// <returns></returns>
         public IEnumerable<string> getAllQuotes()
         {
             return data;
         }
 
+        /// <summary>
+        /// Returns a random quote from the object, including it's ID, quote, and author, not the space between each object.
+        /// </summary>
+        /// <returns></returns>
         public IEnumerable<string> getRandomQuote()
         {
             Random rand = RNG;// new Random();

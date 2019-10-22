@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>quotable.core</name>
+    </assembly>
+    <members>
+        <member name="T:quotable.core.DefaultRandomQuoteProvider">
+            <summary>
+            Unsucsessfull creation of a quote provider, left here as a reminder
+            </summary>
+        </member>
+        <member name="M:quotable.core.DefaultRandomQuoteProvider.#ctor(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Unsucessful
+            </summary>
+            <param name="iString"></param>
+        </member>
+        <member name="M:quotable.core.DefaultRandomQuoteProvider.addToQuoteList(System.String,System.String,System.String)">
+            <summary>
+            Unused
+            </summary>
+            <param name="iD"></param>
+            <param name="quote"></param>
+            <param name="autho"></param>
+        </member>
+        <member name="M:quotable.core.DefaultRandomQuoteProvider.getAllQuotes">
+            <summary>
+            Unused
+            </summary>
+        </member>
+        <member name="M:quotable.core.DefaultRandomQuoteProvider.getQuote(System.Int64)">
+            <summary>
+            Unused
+            </summary>
+            <param name="lng"></param>
+        </member>
+        <member name="M:quotable.core.DefaultRandomQuoteProvider.getQuoteByID(System.String)">
+            <summary>
+            Unused
+            </summary>
+        </member>
+        <member name="M:quotable.core.DefaultRandomQuoteProvider.getRandomQuote">
+            <summary>
+            Unused
+            </summary>
+        </member>
+        <member name="T:quotable.core.RandomQuoteProvider">
+            <summary>
+            Defines a Random Quote Provider
+            </summary>
+        </member>
+        <member name="M:quotable.core.RandomQuoteProvider.getQuote(System.Int64)">
+            <summary>
+            Creates the IEnumberable sequence.
+            </summary>
+            <param name="lng"></param>
+            <returns> The IEnumerable sequence for the lng. </returns>
+        </member>
+        <member name="M:quotable.core.RandomQuoteProvider.addToQuoteList(System.String,System.String,System.String)">
+            <summary>
+            Used to add a quote to the list/IEnumerable
+            </summary>
+            <param name="iD"></param>
+            <param name="quote"></param>
+            <param name="author"></param>
+        </member>
+        <member name="M:quotable.core.RandomQuoteProvider.getAllQuotes">
+            <summary>
+            Gets all quotes from the list.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:quotable.core.RandomQuoteProvider.getQuoteByID(System.String)">
+            <summary>
+            Gets a quote based on the ID given.
+            </summary>
+            <param name="ID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:quotable.core.RandomQuoteProvider.getRandomQuote">
+            <summary>
+            Gets a random quote from the list.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:quotable.core.SimpleRandomQuoteProvider">
+            <summary>
+            Simplist Quote Provider for homework 0 and beyond.
+            </summary>
+        </member>
+        <member name="F:quotable.core.SimpleRandomQuoteProvider.myID">
+            <summary>
+            This is the String of quotes used to put into the IEnumerable.
+            </summary>
+        </member>
+        <member name="P:quotable.core.SimpleRandomQuoteProvider.RNG">
+            <summary>
+            teachers way of using a random
+            </summary>
+        </member>
+        <member name="M:quotable.core.SimpleRandomQuoteProvider.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Unused but is the constructer for the class.
+            </summary>
+        </member>
+        <member name="M:quotable.core.SimpleRandomQuoteProvider.#ctor">
+            <summary>
+            Constructor that creates a generic SimpleRandomQuoteProvider
+            </summary>
+        </member>
+        <member name="M:quotable.core.SimpleRandomQuoteProvider.#ctor(System.Random)">
+            <summary>
+            teachers way of using a random
+            </summary>
+        </member>
+        <member name="M:quotable.core.SimpleRandomQuoteProvider.addToQuoteList(System.String,System.String,System.String)">
+            <summary>
+            This program takes the input from Program and returns the number of quotes requested from the hard-coded String List
+            If the number is greater than teh number of quotes it will restart the list, so there is no crash.
+            </summary>
+            <param name="iD">ID in string format for easy printing</param>
+            <param name="quote">quote</param>
+            <param name="author">author</param>
+            <returns> The IEnumerable need to access the quotes </returns>
+        </member>
+        <member name="M:quotable.core.SimpleRandomQuoteProvider.getQuote(System.Int64)">
+            <summary>
+            Only used to test before I implement something
+            </summary>
+            <param name="lng"></param>
+            <returns> An Ienumerable used to test before we started using NUnit tests </returns>
+        </member>
+        <member name="M:quotable.core.SimpleRandomQuoteProvider.getQuoteByID(System.String)">
+            <summary>
+            Gets a Quote by the string ID which must be a number.
+            </summary>
+            <param name="ID"></param>
+            <returns> IEnumerable<string> needed that has one ID, quote, and author </string></returns>
+        </member>
+        <member name="M:quotable.core.SimpleRandomQuoteProvider.getAllQuotes">
+            <summary>
+            Returns all quotes in the object
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:quotable.core.SimpleRandomQuoteProvider.getRandomQuote">
+            <summary>
+            Returns a random quote from the object, including it's ID, quote, and author, not the space between each object.
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -49,7 +49,7 @@ namespace Tests
             SimpleRandomQuoteProvider simp = new SimpleRandomQuoteProvider(new Random(1));
             randomController controller = new randomController();
 
-            var result = controller.Get(simp);
+            var result = controller.Get();
 
             List<string> expected = new List<string>();
             string input = "1";

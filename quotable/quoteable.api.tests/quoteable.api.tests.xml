@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>quoteable.api.tests</name>
+    </assembly>
+    <members>
+        <member name="T:Tests.Tests">
+            <summary>
+            Tests the use of "quoteable.api"
+            </summary>
+        </member>
+        <member name="M:Tests.Tests.Setup">
+            <summary>
+            Unused as of Homework 2
+            </summary>
+        </member>
+        <member name="M:Tests.Tests.getQuoteByIDTest">
+            <summary>
+            Tests the equivalent of getQuoteByID(id)
+            </summary>
+        </member>
+        <member name="M:Tests.Tests.getRandomQuoteTest">
+            <summary>
+            Tests the equivalent of getRandomQuote
+            </summary>
+        </member>
+    </members>
+</doc>

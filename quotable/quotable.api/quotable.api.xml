@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>quotable.api</name>
+    </assembly>
+    <members>
+        <member name="T:quotable.api.Controllers.quoteController">
+            <summary>
+            Controller that is used to get all quotes and an individual quote.
+            </summary>
+        </member>
+        <member name="F:quotable.api.Controllers.quoteController.simp">
+            <summary>
+            unused
+            </summary>
+        </member>
+        <member name="M:quotable.api.Controllers.quoteController.Get">
+            <summary>
+            Completes the equivalent of "getALLQuotes()"
+            </summary>
+            <returns>IEnumerbale string but into the api </returns>
+        </member>
+        <member name="M:quotable.api.Controllers.quoteController.Get(System.Int32)">
+            <summary>
+            Completes the equivalent of "getQuoteByID(id)"
+            </summary>
+            <returns>IEnumerbale string but into the api </returns>
+        </member>
+        <member name="M:quotable.api.Controllers.quoteController.Post(System.String)">
+            <summary>
+            Unused as of HomeWork 2
+            </summary>
+            <param name="value">Unused </param>
+        </member>
+        <member name="M:quotable.api.Controllers.quoteController.Put(System.Int32,System.String)">
+            <summary>
+            Unused as of HomeWork 2
+            </summary>
+            <param name="id"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:quotable.api.Controllers.quoteController.Delete(System.Int32)">
+            <summary>
+            Unused as of HomeWork 2
+            </summary>
+            /// <param name="id"></param>
+        </member>
+        <member name="T:quotable.api.Controllers.randomController">
+            <summary>
+            Used to get a random quote.
+            </summary>
+        </member>
+        <member name="M:quotable.api.Controllers.randomController.Get">
+            <summary>
+            Completes the equivalent of "getRandomQuote"
+            </summary>
+            <returns>IEnumerbale string but into the api </returns>
+        </member>
+        <member name="M:quotable.api.Controllers.randomController.Get(System.Int32)">
+            <summary>
+            Completes the equivalent of "getQuoteByID(id)"
+            </summary>
+            <returns>IEnumerbale string but into the api </returns>
+        </member>
+        <member name="M:quotable.api.Controllers.randomController.Post(System.String)">
+            <summary>
+            Unused as of HomeWork 2
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:quotable.api.Controllers.randomController.Put(System.Int32,System.String)">
+            <summary>
+            Unused as of HomeWork 2
+            </summary>
+            <param name="id"></param>
+            /// <param name="value"></param>
+        </member>
+        <member name="M:quotable.api.Controllers.randomController.Delete(System.Int32)">
+            <summary>
+            Unused as of HomeWork 2
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="T:quotable.api.Models.quoteData">
+            <summary>
+            Unused if needed will become used and I will face the consequences of not using it to start with.
+            </summary>
+        </member>
+        <member name="T:quotable.api.Program">
+            <summary>
+            Made by api creater
+            </summary>
+        </member>
+        <member name="M:quotable.api.Program.Main(System.String[])">
+            <summary>
+            Made by api creater
+            </summary>
+        </member>
+        <member name="M:quotable.api.Program.CreateWebHostBuilder(System.String[])">
+            <summary>
+            Made by api creater
+            </summary>
+        </member>
+        <member name="T:quotable.api.Startup">
+            <summary>
+            Made by api creater
+            </summary>
+        </member>
+        <member name="M:quotable.api.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Made by api creater
+            </summary>
+        </member>
+        <member name="P:quotable.api.Startup.Configuration">
+            <summary>
+            Made by api creater
+            </summary>
+        </member>
+        <member name="M:quotable.api.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Made by api creater
+            </summary>
+        </member>
+        <member name="M:quotable.api.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+            Made by api creater
+            </summary>
+        </member>
+    </members>
+</doc>

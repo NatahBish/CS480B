@@ -22,10 +22,22 @@ namespace quotable.api.Controllers
         /// <returns>IEnumerbale string but into the api </returns>
         // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get(SimpleRandomQuoteProvider simp)
+        public ActionResult<IEnumerable<string>> Get()
         {
             return simp.getRandomQuote().ToList();
         }
+
+        // <summary>
+        // Does not work kept here as a reminder to not do something like this again.
+        // Completes the equivalent of "getRandomQuote", used for the test in "quoteable.api.tests".
+        // </summary>
+        // <returns>IEnumerbale string but into the api </returns>
+        // GET api/values
+        //[HttpGet]
+        //public ActionResult<IEnumerable<string>> Get(SimpleRandomQuoteProvider simp)
+        //{
+        //    return simp.getRandomQuote().ToList();
+        //}
 
         /// <summary>
         /// Completes the equivalent of "getQuoteByID(id)"

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>quotable.core.tests</name>
+    </assembly>
+    <members>
+        <member name="T:Tests.Tests">
+            <summary>
+            Tests quoteable.core
+            </summary>
+        </member>
+        <member name="M:Tests.Tests.Setup">
+            <summary>
+            Unused
+            </summary>
+        </member>
+        <member name="M:Tests.Tests.getQuoteByIDTest">
+            <summary>
+            Tests SimpleRandomQuoteProvider GetQuoteByID
+            </summary>
+        </member>
+        <member name="M:Tests.Tests.getAllQuotesTest">
+            <summary>
+            Tests SimpleRandomQuoteProvider GetAllQuotes
+            </summary>
+        </member>
+    </members>
+</doc>

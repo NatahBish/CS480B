@@ -4,12 +4,19 @@ using System.Collections.Generic;
 
 namespace Tests
 {
+    /// <summary>
+    /// Tests quoteable.core
+    /// </summary>
     public class Tests
     {
+        /// <summary>
+        /// Unused
+        /// </summary>
         [SetUp]
         public void Setup()
         {
         }
+
         /// <summary>
         /// Tests SimpleRandomQuoteProvider GetQuoteByID
         /// </summary>
