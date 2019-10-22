@@ -7,6 +7,9 @@ using quotable.core;
 
 namespace quotable.api.Controllers
 {
+    /// <summary>
+    /// Controller that is used to get all quotes and an individual quote.
+    /// </summary>
     [Route("api/[controller]")]
     [ApiController]
     public class quoteController : ControllerBase
@@ -44,18 +47,31 @@ namespace quotable.api.Controllers
             return simp.getQuoteByID(id.ToString()).ToList();
         }
 
+        /// <summary>
+        /// Unused as of HomeWork 2
+        /// </summary>
+        /// <param name="value">Unused </param>
         // POST api/values
         [HttpPost]
         public void Post([FromBody] string value)
         {
         }
 
+        /// <summary>
+        /// Unused as of HomeWork 2
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="value"></param>
         // PUT api/values/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
         {
         }
 
+        /// <summary>
+        /// Unused as of HomeWork 2
+        /// </summary>
+        /// /// <param name="id"></param>
         // DELETE api/values/5
         [HttpDelete("{id}")]
         public void Delete(int id)

@@ -10,13 +10,22 @@ using Microsoft.Extensions.Logging;
 
 namespace quotable.api
 {
+    /// <summary>
+    /// Made by api creater
+    /// </summary>
     public class Program
     {
+        /// <summary>
+        /// Made by api creater
+        /// </summary>
         public static void Main(string[] args)
         {
             CreateWebHostBuilder(args).Build().Run();
         }
 
+        /// <summary>
+        /// Made by api creater
+        /// </summary>
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>();

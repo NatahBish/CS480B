@@ -14,7 +14,7 @@ namespace Tests
         /// Tests SimpleRandomQuoteProvider GetQuoteByID
         /// </summary>
         [Test]
-        public void Test1()
+        public void getQuoteByIDTest()
         {
             SimpleRandomQuoteProvider simp = new SimpleRandomQuoteProvider();
             List<string> expected = new List<string>();
@@ -33,7 +33,7 @@ namespace Tests
         /// Tests SimpleRandomQuoteProvider GetAllQuotes
         /// </summary>
         [Test]
-        public void Test2()
+        public void getAllQuotesTest()
         {
             SimpleRandomQuoteProvider simp = new SimpleRandomQuoteProvider();
             List<string> expected = new List<string>();

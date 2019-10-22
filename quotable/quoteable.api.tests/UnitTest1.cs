@@ -6,8 +6,14 @@ using System.Collections.Generic;
 
 namespace Tests
 {
+    /// <summary>
+    /// Tests the use of "quoteable.api"
+    /// </summary>
     public class Tests
     {
+        /// <summary>
+        /// Unused as of Homework 2
+        /// </summary>
         [SetUp]
         public void Setup()
         {
@@ -17,7 +23,7 @@ namespace Tests
         /// Tests the equivalent of getQuoteByID(id)
         /// </summary>
         [Test]
-        public void Test1()
+        public void getQuoteByIDTest()
         {
             SimpleRandomQuoteProvider simp = new SimpleRandomQuoteProvider();
             quoteController controller = new quoteController();
@@ -35,10 +41,10 @@ namespace Tests
         }
 
         /// <summary>
-        /// Tests the equivalent of getRandomQuote(id)
+        /// Tests the equivalent of getRandomQuote
         /// </summary>
         [Test]
-        public void Test2()
+        public void getRandomQuoteTest()
         {
             SimpleRandomQuoteProvider simp = new SimpleRandomQuoteProvider(new Random(1));
             randomController controller = new randomController();
