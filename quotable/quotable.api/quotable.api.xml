@@ -86,6 +86,21 @@
             Unused if needed will become used and I will face the consequences of not using it to start with.
             </summary>
         </member>
+        <member name="P:quotable.api.Models.quoteData.ID">
+            <summary>
+            The quotes ID
+            </summary>
+        </member>
+        <member name="P:quotable.api.Models.quoteData.Quote">
+            <summary>
+            The quote
+            </summary>
+        </member>
+        <member name="P:quotable.api.Models.quoteData.Author">
+            <summary>
+            Author of the quote
+            </summary>
+        </member>
         <member name="T:quotable.api.Program">
             <summary>
             Made by api creater

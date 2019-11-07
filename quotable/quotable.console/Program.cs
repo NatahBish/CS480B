@@ -44,7 +44,7 @@ namespace quotable.console
                     {
                         IEnumerable<String> quoteAskedFor = null;
                         //Console.WriteLine("step 2");
-                        quoteAskedFor = simp.getQuoteByID(i.ToString());
+                        quoteAskedFor = simp.getQuoteByID((i).ToString());
                         foreach (var row in quoteAskedFor)
                         {
                             Console.WriteLine(row);
