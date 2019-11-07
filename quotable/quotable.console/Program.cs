@@ -14,7 +14,6 @@ namespace quotable.console
         {
             SimpleRandomQuoteProvider simp = new SimpleRandomQuoteProvider();
             string input = "";
-            simp.getQuote(1);
 
             //Helps answer Question 4, we did not learn how to read from a file.
             String[] myquotes = { "endure and survive -Last of Us", "You Live to Hunt Another Day -Hunt Showdown", "Rise Up Damned Soul -Hunt Showdown" };
@@ -25,19 +24,32 @@ namespace quotable.console
             }
             DefaultRandomQuoteProvider def = new DefaultRandomQuoteProvider(data);
 
+
             //This is where input starts to be needed, when the user puts in "exit" the code will end, else it will return the hard-coded quotes.
             while (!input.Equals("exit"))
             {
                 Console.WriteLine("Please tell me how many quotes you want, or type 'exit' to end the program");
                 input = Console.ReadLine();
+                Console.WriteLine("");
                 long lng = 0;
                 bool isAlong = long.TryParse(input, out lng);
+                if (!isAlong)
+                {
+                    Console.WriteLine("not a number");
+                }
                 if (isAlong)
                 {
-                    int inputInt = Convert.ToInt32(input);
-                    for(long i = 0; i < inputInt; i++)
+                    //Console.WriteLine("step 1");
+                    for(long i = 0; i < lng; i++)
                     {
-                        simp.getQuoteByID(i.ToString());
+                        IEnumerable<String> quoteAskedFor = null;
+                        //Console.WriteLine("step 2");
+                        quoteAskedFor = simp.getQuoteByID(i.ToString());
+                        foreach (var row in quoteAskedFor)
+                        {
+                            Console.WriteLine(row);
+                        }
+                        Console.WriteLine("");
                     }
 
                 }

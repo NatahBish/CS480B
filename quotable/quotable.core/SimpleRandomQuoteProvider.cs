@@ -124,6 +124,7 @@ namespace quotable.core
                 {
                     if (ID.Equals(data[i]))
                     {
+                        //Console.WriteLine("got inside getQuoteByID if");
                         quote.Add(data[i]);
                         quote.Add(data[i + 1]);
                         quote.Add(data[i + 2]);

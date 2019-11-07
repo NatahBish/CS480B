@@ -10,6 +10,19 @@ namespace quotable.api.Models
     /// </summary>
     public class quoteData
     {
+        /// <summary>
+        /// The quotes ID
+        /// </summary>
+        public string ID { get; set; }
 
+        /// <summary>
+        /// The quote
+        /// </summary>
+        public string Quote { get; set; }
+
+        /// <summary>
+        /// Author of the quote
+        /// </summary>
+        public string Author { get; set; }
     }
 }
