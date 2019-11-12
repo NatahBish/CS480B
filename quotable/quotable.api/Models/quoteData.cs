@@ -13,7 +13,7 @@ namespace quotable.api.Models
         /// <summary>
         /// The quotes ID
         /// </summary>
-        public string ID { get; set; }
+        public int ID { get; set; }
 
         /// <summary>
         /// The quote
