@@ -15,9 +15,9 @@ namespace quotable.core
         public long Id { get; set; }
 
         /// <summary>
-        /// The title of the document.
+        /// The title of the quote.
         /// </summary>
-        public string Title { get; set; }
+        public string Saying { get; set; }
 
         /// <summary>
         /// The collection of authors of the document

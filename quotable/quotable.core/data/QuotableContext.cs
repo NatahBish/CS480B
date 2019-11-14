@@ -5,7 +5,10 @@ using System.Text;
 
 namespace quotable.core.data
 {
-	class QuotableContext : DbContext
+    /// <summary>
+    /// The database context that provides access to document and other data
+    /// </summary>
+	public class QuotableContext : DbContext
 	{
 		/// <summary>
 		/// Constructor
@@ -18,7 +21,7 @@ namespace quotable.core.data
 		/// <summary>
 		/// Used to access documents in the database.
 		/// </summary>
-		public DbSet<Quote> Quote { get; set; }
+		public DbSet<Quote> Quotes { get; set; }
 
 		/// <summary>
 		/// Used to access authors in the database.
