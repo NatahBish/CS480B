@@ -4,11 +4,10 @@
         <name>quotable.console</name>
     </assembly>
     <members>
-        <member name="M:quotable.console.Program.Main(System.String[])">
+        <member name="T:quotable.console.DatabaseProgram">
             <summary>
-            Starts the program
+            Makes the database do something
             </summary>
-            <param name="args"></param>
         </member>
     </members>
 </doc>

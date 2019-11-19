@@ -41,8 +41,8 @@ namespace quotable.console
 
                 foreach (var quote in quotes)
                 {
-                    Console.WriteLine($"quote.id = {quote.Id}");
-                    Console.WriteLine($"quote.title = {quote.Title}");
+                    Console.WriteLine($"quote.Id = {quote.Id}");
+                    Console.WriteLine($"quote.Saying = {quote.Saying}");
 
                     foreach (var author in quote.Authors)
                     {
