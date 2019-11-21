@@ -45,6 +45,30 @@
             </summary>
             /// <param name="id"></param>
         </member>
+        <member name="T:quotable.api.Controllers.QuoteDataController">
+            <summary>
+            API controller for the '/quotes' resource.
+            </summary>
+        </member>
+        <member name="M:quotable.api.Controllers.QuoteDataController.#ctor(quotable.core.data.QuotableContext)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="context">The database context to data access.</param>
+        </member>
+        <member name="M:quotable.api.Controllers.QuoteDataController.Get">
+            <summary>
+            Returns all the quotes.
+            </summary>
+            <returns>All the quotes.</returns>
+        </member>
+        <member name="M:quotable.api.Controllers.QuoteDataController.Get(System.Int64)">
+            <summary>
+            Gets a specific quote.
+            </summary>
+            <param name="id">The id of the quote to get.</param>
+            <returns>The quote.</returns>
+        </member>
         <member name="T:quotable.api.Controllers.randomController">
             <summary>
             Used to get a random quote.
@@ -80,6 +104,31 @@
             Unused as of HomeWork 2
             </summary>
             <param name="id"></param>
+        </member>
+        <member name="T:quotable.api.Models.Author">
+            <summary>
+            Model for an author
+            </summary>
+        </member>
+        <member name="P:quotable.api.Models.Author.FirstName">
+            <summary>
+            The first name of the author
+            </summary>
+        </member>
+        <member name="P:quotable.api.Models.Author.LastName">
+            <summary>
+            The last name of the author
+            </summary>
+        </member>
+        <member name="T:quotable.api.Models.Quote">
+            <summary>
+            Model for a quote
+            </summary>
+        </member>
+        <member name="P:quotable.api.Models.Quote.Saying">
+            <summary>
+            The saying of the quote
+            </summary>
         </member>
         <member name="T:quotable.api.Models.quoteData">
             <summary>
@@ -139,6 +188,11 @@
         <member name="M:quotable.api.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
             <summary>
             Made by api creater
+            </summary>
+        </member>
+        <member name="M:quotable.api.Startup.PopulateDatabase(quotable.core.data.QuotableContext)">
+            <summary>
+            Populates a database with a set of authors and quotes and combines them in a AuthorQuote too.
             </summary>
         </member>
     </members>
