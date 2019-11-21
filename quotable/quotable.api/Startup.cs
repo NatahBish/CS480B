@@ -106,6 +106,11 @@ namespace quotable.api
                 FirstName = "Oregon Trail",
                 LastName = "MECC"
             };
+            var author5 = new Author()
+            {
+                FirstName = "S'chn T'gai",
+                LastName = "Spock"
+            };
 
             var quote1 = new Quote();
             quote1.Saying = "endure and survive";
@@ -122,13 +127,17 @@ namespace quotable.api
             var quote5 = new Quote();
             quote5.Saying = "You have died of dysentery";
 
+            var quote6 = new Quote();
+            quote6.Saying = "Vulcan Pinch";
+
             var qa1 = new QuoteAuthor() { Quote = quote1, Author = author1 };
             var qa2 = new QuoteAuthor() { Quote = quote2, Author = author2 };
             var qa3 = new QuoteAuthor() { Quote = quote3, Author = author2 };
             var qa4 = new QuoteAuthor() { Quote = quote4, Author = author3 };
             var qa5 = new QuoteAuthor() { Quote = quote5, Author = author4 };
+            var qa6 = new QuoteAuthor() { Quote = quote6, Author = author5 };
 
-            context.AddRange(qa1, qa2, qa3, qa4, qa5);
+            context.AddRange(qa1, qa2, qa3, qa4, qa5, qa6);
 
             context.SaveChanges();
         }
